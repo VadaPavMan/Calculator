@@ -8,3 +8,17 @@ self.addEventListener('install', e => {
 self.addEventListener('fetch', e => {
   e.respondWith(caches.match(e.request).then(r => r || fetch(e.request)));
 });
+
+self.addEventListener('activate', e => {
+  e.waitUntil(
+    caches.keys().then(cacheNames => {
+      return Promise.all(
+        cacheNames.map(cacheName => {
+          if (cacheName !== CACHE) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
+});
