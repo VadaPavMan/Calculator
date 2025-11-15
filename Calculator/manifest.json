@@ -1,6 +1,7 @@
 {
-  "name": "Calculator",
-  "short_name": "Cal",
+  "name": "Calculator App",
+  "short_name": "Calculator",
+  "description": "A simple and efficient calculator web application",
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#222222",
@@ -10,3 +11,4 @@
     { "src": "/icons/icon.png", "sizes": "512x512", "type": "image/png" }
   ]
 }
+
