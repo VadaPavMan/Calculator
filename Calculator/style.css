@@ -1,0 +1,115 @@
+body {
+  background-color: rgb(252, 243, 184);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  margin: 0;
+  padding-top: 60px;
+  font-family: 'Poppins', sans-serif;
+}
+
+body, .calculator, .main, input {
+  transition: background-color 0.5s, color 0.5s;
+}
+
+#theme {
+  position:absolute;
+  top: 18px;
+  right: 30px;
+  background-color: #121212;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  z-index: 10;
+}
+
+.calculator {
+  width: clamp(300px, 90vw, 420px);
+  margin-inline: auto;
+  text-align: center;
+  border-radius: 12px;
+  background-color: black;
+  color: white;
+  padding: 15px 0;
+  font-weight: bold;
+  font-size: 1.3rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+}
+
+.main {
+  background-color: #121212;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  width: clamp(300px, 90vw, 420px);
+  margin-inline: auto;
+}
+
+.display input {
+  height: 60px;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  border: none;
+}
+
+.display #display{
+  margin-top: 5px; 
+  background-color: #bdbbbb;
+  border: none;
+}
+
+.buttons .btn {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 5px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+
+.buttons .row > .btn,
+.buttons .row > div {
+  width: 100%;
+  border-radius: 10px;
+  padding: 14px 0;      
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.buttons .btn:hover {
+  transform: scale(1.05);
+}
+
+.dark-mode {
+  background-color: #222121;
+  color: white;
+}
+
+.dark-mode #display{
+  color: #121212;
+}
+
+.dark-mode .calculator {
+  background-color: #fcfcfc;
+  color: rgb(10, 10, 10);
+}
+
+.dark-mode .main {
+  background-color: #fcfcfc;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .form-control.text-end { 
+    border: 2px solid black;
+    border-color: #121212;
+    color: white;
+}
+
+.dark-mode #theme {
+  background-color: white;
+  color: black;
+}
