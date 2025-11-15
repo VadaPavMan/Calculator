@@ -5,4 +5,4 @@ Very Simple Calculator App.
 ![light](light_theme.png)
 
 # Dark Mode:
-![dark](dark_theme.png)
+![dark](black_theme.png)
